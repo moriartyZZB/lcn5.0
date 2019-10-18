@@ -1,0 +1,16 @@
+server:
+  port: 8002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:17002/eureka/
+feign:
+  hystrix:
+    enabled: true
+  httpclient:
+    enabled: true
+spring:
+  profiles:
+    active: lcn
+  application:
+    name: lcn-client-b

@@ -1,0 +1,53 @@
+spring:
+  application:
+    #项目名称
+    name: lcn-tm
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/tx-manager?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  #redis 配置
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+server:
+  port: 7970
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:17002/eureka/
+  instance:
+    # 注册名
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    # 设置注册到服务的为ip
+    prefer-ip-address: true
+mybatis:
+  configuration:
+    #开启驼峰
+    map-underscore-to-camel-case: true
+    #允许JDBC 生成主键。需要驱动器支持。如果设为了true，这个设置将强制使用被生成的主键，有一些驱动器不兼容不过仍然可以执行。  default:false
+    use-generated-keys: true
+tx-lcn:
+  manager:
+    # TxManager ip(client请求ip)
+    host: 127.0.0.1
+    # client 请求端口
+    port: 8070
+    # 心跳检测时间 单位：ms
+    heart-time: 12000
+    #事务执行总时间 单位ms
+    dtx-time: 10000
+    concurrent-level: 128
+    #登陆后台密码
+    admin-key: moriartyzzb
+
+  logger:
+    # 开启日志
+    enabled: true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    jdbc-url: jdbc:mysql://127.0.0.1:3306/tx-manager?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="lcn-client-a" />
+        <module name="lcn-tm" />
+        <module name="lcn-eureka" />
+        <module name="lcn-client-b" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="lcn-client-a" target="1.8" />
+      <module name="lcn-client-b" target="1.8" />
+      <module name="lcn-eureka" target="1.8" />
+      <module name="lcn-tm" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="lcn-client-a" options="-parameters" />
+      <module name="lcn-client-b" options="-parameters" />
+      <module name="lcn-eureka" options="-parameters" />
+      <module name="lcn-tm" options="-parameters" />
+    </option>
+  </component>
+</project>

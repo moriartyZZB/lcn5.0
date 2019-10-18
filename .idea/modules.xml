@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/lcn-client-a/lcn-client-a.iml" filepath="$PROJECT_DIR$/lcn-client-a/lcn-client-a.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lcn-client-b/lcn-client-b.iml" filepath="$PROJECT_DIR$/lcn-client-b/lcn-client-b.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lcn-eureka/lcn-eureka.iml" filepath="$PROJECT_DIR$/lcn-eureka/lcn-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lcn-tm/lcn-tm.iml" filepath="$PROJECT_DIR$/lcn-tm/lcn-tm.iml" />
+    </modules>
+  </component>
+</project>

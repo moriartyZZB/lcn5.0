@@ -1,0 +1,31 @@
+#使用了mybatis-plus
+mybatis-plus:
+  mapper-locations: classpath*:mappers/*.xml
+  map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+tx-lcn:
+  client:
+    manager-address: 127.0.0.1:8070
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/for_lcn?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 1
+      min-idle: 1
+      max-active: 200
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 'x'
+      test-while-idle: true
+      test-on-borrow: false
+      pool-prepared-statements: false
+      max-pool-prepared-statement-per-connection-size: 20
+      remove-abandoned-timeout: 1800
+      remove-abandoned: true

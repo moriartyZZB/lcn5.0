@@ -1,0 +1,2 @@
+yml和properties的配置文件有些不同
+spring boot的版本要2.1.0，笔者之前用的2.0.3会报错
